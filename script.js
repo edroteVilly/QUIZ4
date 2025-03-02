@@ -13,7 +13,7 @@ function displayCourses(courses) {
     courseList.innerHTML = ""; // Clear previous content
     courses.forEach(course => {
         let li = document.createElement('li');
-        li.innerHTML = `<strong>${course.code}</strong>: ${course.description.replace(/\n/g, '<br>')} (${course.credit} Credits)`;
+        li.innerHTML = `${course.year_level} Year, ${course.sem} Sem - ${course.code}: ${course.description} (${course.credit.replace(/\n/g, '<br>')} Credits\n)`;
         courseList.appendChild(li);
     });
 }
